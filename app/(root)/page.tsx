@@ -1,8 +1,8 @@
-import React from "react";
-import HeaderBox from "@/uicomponents/HeaderBox";
+import HeaderBox from '@/components/ui/HeaderBox';
+import TotalBalancebox from '@/components/ui/TotalBalancebox';
 
-const Home = () => {
-    const loggedIn = { firstname: "Mani" };
+function Home() {
+    const LoggedIn = { firstname: "Mani" };
     return (
         <section className="home">
             <div className="home-content">
@@ -10,8 +10,14 @@ const Home = () => {
                     <HeaderBox
                         type="greeting"
                         title="Welcome"
-                        user={loggedIn?.firstname || "Guest"}
-                        subtext="Access and manage your account and transaction efficiently"
+                        user={LoggedIn?.firstname || "Guest"}
+                        subtext="Access and manage your account and transactions efficiently"
+                    />
+
+                    < TotalBalancebox 
+                        accounts={[]}
+                        totalBanks={1}
+                        totalCurrentBalance={1250.35}
                     />
                 </header>
             </div>
